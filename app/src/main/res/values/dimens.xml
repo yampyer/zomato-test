@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="margin_general">16dp</dimen>
+    <dimen name="full_width">0dp</dimen>
+    <dimen name="full_height">0dp</dimen>
+    <dimen name="til_margin_top_choose_city">24dp</dimen>
+    <dimen name="btn_margin_top_choose_city">10dp</dimen>
+    <dimen name="elevation_progress_bar">8dp</dimen>
+    <dimen name="elevation_progress_background">4dp</dimen>
+    <dimen name="regular_text_size">14sp</dimen>
+    <dimen name="padding_bottom_item_restaurant">10dp</dimen>
+    <dimen name="card_margin_item_restaurant">5dp</dimen>
+    <dimen name="card_radius_item_restaurant">12dp</dimen>
+    <dimen name="card_elevation_item_restaurant">3dp</dimen>
+    <dimen name="card_padding_item_restaurant">10dp</dimen>
+    <dimen name="restaurant_name_text_size">18sp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="padding_recycler_view_restaurants">16dp</dimen>
+</resources>

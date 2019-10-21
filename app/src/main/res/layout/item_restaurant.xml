@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.jeanpigomez.zomatotest.ui.RestaurantViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cvRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin_item_restaurant"
+        card_view:cardBackgroundColor="@color/card_restaurant_background"
+        card_view:cardCornerRadius="@dimen/card_radius_item_restaurant"
+        card_view:cardElevation="@dimen/card_elevation_item_restaurant"
+        card_view:contentPadding="@dimen/card_padding_item_restaurant">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_bottom_item_restaurant">
+
+            <ImageView
+                android:id="@+id/ivFeatured"
+                android:layout_width="@dimen/full_width"
+                android:layout_height="wrap_content"
+                app:imageUrl="@{viewModel.getRestaurantImage()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="@dimen/full_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:textSize="@dimen/restaurant_name_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFeatured"
+                app:mutableText="@{viewModel.getRestaurantName()}" />
+
+            <TextView
+                android:id="@+id/tvRatingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/rating"
+                android:textSize="@dimen/regular_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="@dimen/full_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:textSize="@dimen/regular_text_size"
+                app:layout_constraintStart_toEndOf="@+id/tvRatingLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvRatingLabel"
+                app:mutableText="@{viewModel.getRestaurantRating()}" />
+
+            <TextView
+                android:id="@+id/tvTimingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/opening_hours"
+                android:textSize="@dimen/regular_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRatingLabel" />
+
+            <TextView
+                android:id="@+id/tvTimings"
+                android:layout_width="@dimen/full_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:textSize="@dimen/regular_text_size"
+                app:layout_constraintStart_toEndOf="@+id/tvTimingsLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvTimingsLabel"
+                app:mutableText="@{viewModel.getRestaurantTimings()}" />
+
+            <TextView
+                android:id="@+id/tvPhoneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/phone_numbers"
+                android:textSize="@dimen/regular_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTimings" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="@dimen/full_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:textSize="@dimen/regular_text_size"
+                app:layout_constraintStart_toEndOf="@+id/tvPhoneLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvPhoneLabel"
+                app:mutableText="@{viewModel.getRestaurantPhone()}" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>

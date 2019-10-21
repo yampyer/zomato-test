@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Zomato Test</string>
+    <string name="title_activity_main">Choose City</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="no_city_available">No city available</string>
+    <string name="search">Search</string>
+    <string name="please_enter_city_name">Please enter a city name</string>
+    <string name="getting_locations">Getting locations</string>
+    <string name="no_restaurants">No restaurants in your city</string>
+    <string name="rating">Rating:</string>
+    <string name="opening_hours">Opening Hours:</string>
+    <string name="phone_numbers">Phone Numbers:</string>
+</resources>
